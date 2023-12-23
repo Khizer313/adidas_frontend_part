@@ -1,0 +1,1577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: #fbfbfb;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+/* -------------------------------- >>>>>>>>>>>>>          header     <<<<<<<<<<<       -------------------------------------------
+----------------- includes nav,layout & boxes  ------------------------- */
+header {
+  height: 140vh;
+  position: relative;
+  overflow: hidden;
+  background: #fbfbfb;
+}
+header::before {
+  background: linear-gradient(
+    180deg,
+    #9ce509 0%,
+    rgba(156, 229, 9, 0.95) 14.58%,
+    rgba(156, 229, 9, 0.8) 29.17%,
+    #9ce509 42.19%,
+    #9ce509 56.77%,
+    rgba(156, 229, 9, 0.72) 71.35%,
+    rgba(156, 229, 9, 0.4) 85.94%,
+    rgba(156, 229, 9, 0.2) 100%
+  );
+
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -37.1em;
+  width: 100%;
+  height: 120%;
+  z-index: 0;
+  transform: rotate(120deg);
+}
+/* ----------------- >>>>>>>>>>>>>>>          start navbar        <<<<<<<<<<<<<<< ------------------------ */
+
+nav {
+  width: 80vw;
+  height: 5vh;
+  display: grid;
+  grid-template-columns: 10vw 50vw 30vw;
+
+  justify-content: space-between;
+  gap: 2rem;
+  top: 5rem;
+  left: 16rem;
+  right: 1rem;
+  position: relative;
+}
+
+.logo {
+  font-family: Inter;
+  align-items: center;
+  color: #2a2a2a;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  width: 93px;
+  height: 17px;
+}
+.links {
+  display: grid;
+
+  grid-template-columns: repeat(7, max-content);
+  position: relative;
+  left: -18%;
+  width: Hug (517px);
+  height: Hug (19px);
+  gap: 25px;
+}
+ul {
+  list-style: none;
+  justify-content: center;
+}
+ul li {
+  gap: 3rem;
+  cursor: pointer;
+  width: Hug (51px);
+  height: Hug (19px);
+  /* gap: 9px; */
+}
+
+ul li img {
+  /* padding-right: 1rem; */
+  width: 13px;
+  height: 13px;
+  color: #000000;
+  margin-right: 4px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000000;
+
+  width: 34px;
+  height: 15px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+ul li:hover {
+  color: #9ce509;
+}
+.links li a:hover {
+  color: #9ce509;
+  border-bottom: 3px solid #9ce509;
+}
+.searchBox {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 1rem;
+  margin-top: -5px;
+}
+.searchBox input {
+  width: 145px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #023; /* Specify the border style */
+  background: linear-gradient(0deg, #e2e2e4, #e2e2e4),
+    linear-gradient(0deg, #fbfbfb, #fbfbfb);
+  background-image: url("images/inputIcon.png");
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
+  background-position: 10px center; /* Adjusted the padding */
+  padding-left: 45px; /* Adjusted the padding */
+}
+
+.searchBox input::placeholder {
+  /* Adjusted the padding */
+  padding-left: -3px;
+  width: 51px;
+  height: 15px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #777777;
+}
+
+.searchBox img {
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+}
+.menu-button {
+  display: none;
+}
+.menu-bar {
+  display: none;
+}
+/* ----------------->>>>>>>>>>>>>>>>>>>>>           layout after nav       <<<<<<<<<<<<<<<<<<<<<<<------------------------- */
+
+.layout {
+  display: flex;
+  height: 90vh;
+  width: 70vw;
+  position: relative;
+  top: 3%;
+  align-items: center;
+  justify-content: center;
+  left: 30%;
+}
+.layout_one {
+  position: relative;
+  left: -25%;
+  top: 26%;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+.layout_one h5 {
+  color: #000000;
+  width: max-content;
+  height: 58px;
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 37px;
+}
+.layout_one h1 {
+  color: #000000;
+  position: relative;
+  width: 445px;
+  height: 310px;
+  font-family: Inter;
+  font-size: 128px;
+  font-weight: 800;
+  line-height: 155px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 27px;
+}
+.layout_one button {
+  border: none;
+  border: 1px;
+  background: linear-gradient(0deg, #9ce509, #9ce509),
+    linear-gradient(0deg, #e2e2e4, #e2e2e4);
+  font-family: Inter;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+  padding: 20px 40px 20px 40px;
+  border-radius: 50px;
+  border: 1px;
+  gap: 25px;
+  border: 1px solid #e2e2e4;
+}
+.layout_one button span {
+  width: 169px;
+  height: 29px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fbfbfb;
+}
+.layout_one button img {
+  width: 20px;
+  height: 14.97px;
+  angle: -90 deg;
+  color: #fbfbfb;
+}
+.layout_one button:hover {
+  background: #ffffff;
+  color: #9ce509;
+}
+
+.layout_two {
+  position: relative;
+  top: 15%;
+  left: -33%;
+  z-index: 0;
+  transform: rotate(4deg);
+}
+.layout_two img {
+  height: 50%;
+  width: 130%;
+  object-fit: cover;
+}
+
+/* ----------------->>>>>>>>>>>>>>>>>>>>           boxes section          <<<<<<<<<<<<<<<<-------------------------
+----------------- have 3 boxes ------------------------- */
+
+.boxes {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 20vw);
+  grid-template-rows: repeat(1, max-content);
+  z-index: 99999;
+  left: 11%;
+  right: -9%;
+  bottom: 5%;
+  margin-top: -3rem;
+  position: relative;
+}
+.box {
+  background: linear-gradient(
+    180deg,
+    #e4e4e4 0%,
+    rgba(228, 228, 228, 0.473958) 51.56%,
+    #e4e4e4 100%
+  );
+
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+.box p {
+  background: #fbfbfb;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  width: Hug (221px);
+  height: Hug (42px);
+  top: 1138px;
+  left: 178px;
+  padding: 8px 6px 8px 6px;
+  border-radius: 10px;
+  gap: 51px;
+}
+.box p .span_one {
+  width: 90%;
+  height: 17px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #2a2a2a;
+}
+.span_two {
+  width: Hug (26px);
+  height: Hug (26px);
+  gap: 8px;
+  background-color: #9ce509;
+  color: #ffffff;
+  margin-left: 10%;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+.span_two b {
+  width: 11.39px;
+  height: 10px;
+  font-size: 21px;
+}
+.span_two:hover {
+  background: #ffffff;
+  color: #9ce509;
+  border: 1px solid #9ce509;
+}
+.box img {
+  width: 265.19px;
+  height: 133.86px;
+  position: relative;
+  top: -20%;
+  object-fit: cover;
+}
+
+/* ----------------->>>>>>>>>>>>>>>>>>>>         main section      <<<<<<<<<<<<<<<<<<<<<<<-------------------------
+----------------- contain 3 items and then 8 ------------------------- */
+
+main {
+  margin-top: 7%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  background: #e7f9c480;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-rows: repeat(1, max-content);
+  z-index: 99;
+  position: relative;
+  top: -5rem;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10%;
+}
+/*----------------- 3 item  ------------------------- */
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  gap: 5%;
+}
+.item img {
+  width: 78px;
+  height: 78px;
+  top: 1283px;
+  left: 160px;
+  border-radius: 5px;
+  background: #9ce509;
+  border: 2px solid #fbfbfb;
+  object-fit: cover;
+  padding: 1.9rem;
+}
+.list {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list h4 {
+  width: max-content;
+  height: 29px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: #000000;
+}
+.list p {
+  width: max-content;
+  height: 19px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.P_head {
+  display: grid;
+  margin-top: 1rem;
+  margin-left: 16rem;
+  width: max-content;
+  height: 44px;
+  top: 1444px;
+  left: 160px;
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 500;
+
+  text-align: left;
+  color: #000000;
+}
+
+/* ---------------->>>>>>>>>>>>>>>>>>>>>>>>>>          shopping section          <<<<<<<<<<<<<<<<<<<<<-------------------------
+----------------- have 8 images ------------------------- */
+
+.portfolio {
+  margin-top: 5%;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  place-items: center;
+  padding: 1px 90px;
+  margin-left: 17px;
+  grid-row-gap: 10%;
+  grid-column-gap: 0.1rem;
+}
+
+.portfolio .P_item img {
+  width: 100%;
+  object-fit: cover;
+}
+.img_div {
+  width: 256px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    #e4e4e4 0%,
+    rgba(228, 228, 228, 0.474) 49.48%,
+    #e4e4e4 100%
+  );
+}
+
+.txt_div {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 35%;
+  place-items: center;
+  margin-top: 1rem;
+  padding-left: 2px;
+}
+.txt_div .inner_div h5 {
+  width: 123px;
+  height: 22px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+}
+.inner_div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.txt_div .inner_div p {
+  width: max-content;
+  height: 17px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #777777;
+}
+.txt_div .inner_div p b {
+  color: #000000;
+}
+
+/*--------------   play btn section ------------*/
+
+.N_head {
+  margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+.playBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.bg {
+  margin-top: 5%;
+  z-index: 5;
+}
+.circle {
+  position: relative;
+  width: 271px;
+  height: 271px;
+  top: -44rem;
+  left: 0.1%;
+  z-index: 10;
+}
+.btn {
+  position: relative;
+  width: 66.64px;
+  height: 70.15px;
+  top: -27rem;
+  left: 0.1%;
+  z-index: 15;
+  cursor: pointer;
+}
+
+.dryFirst {
+  position: relative;
+
+  top: -82rem;
+  left: -1%;
+  z-index: 15;
+  width: 962px;
+  height: 510px;
+
+  border-radius: 50px;
+  background: #d9d9d933;
+}
+
+.drySec {
+  position: relative;
+  width: 1010px;
+  height: 310px;
+
+  border-radius: 50px;
+
+  top: -110rem;
+  left: -1%;
+  z-index: 1;
+
+  border-radius: 50px;
+
+  background: #9ce50933;
+}
+
+/* ----------------->>>>>>>>>>>>>>>>>>           slider section          <<<<<<<<<<<<<<<<<<<<<-------------------------
+----------------- have 2 sliders ------------------------ */
+.new_head {
+  margin-top: -65%;
+  margin-left: 22rem;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 3em;
+}
+.img_container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 50vw max-content;
+  gap: 8rem;
+  overflow: visible;
+}
+.images {
+  display: grid;
+  place-items: center;
+
+  height: 100%;
+
+  /* width: 40vw; */
+  width: 544px;
+  height: 348px;
+  background: #ffffff;
+}
+/*-------------------- for 1st box in slider section  --------------------- */
+.images_one {
+  width: 544px;
+  height: 348px;
+  color: #fbfbfb;
+  margin-left: -22rem;
+  overflow: visible;
+  position: relative;
+}
+.images_one .imgBoxOne {
+  width: 462px;
+  height: 307px;
+
+  position: relative;
+  top: 10%;
+  left: -25%;
+  z-index: 9;
+}
+.images .oneHead {
+  width: 205px;
+  height: 129px;
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #000000;
+  position: relative;
+  top: -210%;
+  left: 20%;
+}
+
+.images .oneBtn {
+  border: none;
+  border: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+  width: Hug (142.97px);
+  height: Hug (36px);
+  border: 1px solid #9ce509;
+  padding: 8px 20px 8px 20px;
+  border-radius: 50px;
+  gap: 21px;
+  background: #fbfbfb;
+}
+.images .oneBtn {
+  position: relative;
+  top: -25rem;
+  left: 16rem;
+}
+.images .oneBtn img {
+  width: 20px;
+  height: 24.97px;
+  angle: -90 deg;
+  object-fit: cover;
+  color: #9ce509;
+}
+.images .oneBtn span {
+  width: max-content;
+  height: 15px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #9ce509;
+}
+.images .oneBtn:hover {
+  background: #ffffff;
+  color: #9ce509;
+}
+
+.images .curveOne {
+  width: 522px;
+  height: 340px;
+  top: -47.7rem;
+  right: 1srem;
+  position: relative;
+  z-index: 1;
+}
+
+/*-------------------- for 2nd box in slider section  --------------------- */
+.images_two {
+  width: 544px;
+  height: 348px;
+  margin-left: -28rem;
+  overflow: hidden;
+}
+.images .imgBoxTwo {
+  width: 505px;
+  height: 283px;
+  position: relative;
+  top: 20%;
+  left: 1%;
+  z-index: 9;
+}
+.images .secHead {
+  width: 168px;
+  height: 129px;
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+  position: relative;
+  top: -191%;
+  left: -35%;
+}
+
+.images .secBtn {
+  border: none;
+  border: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+  width: Hug (142.97px);
+  height: Hug (36px);
+  border: 1px solid #9ce509;
+  padding: 8px 20px 8px 20px;
+  border-radius: 50px;
+  gap: 21px;
+  background: #fbfbfb;
+}
+.images .secBtn span {
+  width: max-content;
+  height: 15px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ce509;
+}
+
+.images .secBtn {
+  position: relative;
+  top: -23rem;
+  left: -24rem;
+}
+.images .secBtn img {
+  width: 20px;
+  height: 24.97px;
+  angle: -90 deg;
+  object-fit: cover;
+  color: #9ce509;
+}
+.images .secBtn:hover {
+  background: #ffffff;
+  color: #9ce509;
+}
+.images .curveTwo {
+  width: 682px;
+  height: 348px;
+
+  top: -30rem;
+  left: 1rem;
+  angle: -280 deg;
+  background: linear-gradient(
+    111.12deg,
+    rgba(156, 229, 9, 0.57) 1.76%,
+    rgba(156, 229, 9, 0.59) 28.88%,
+    rgba(156, 229, 9, 0.49) 58.04%,
+    rgba(156, 229, 9, 0.58) 85.16%,
+    rgba(156, 229, 9, 0.24) 100%
+  );
+  position: relative;
+
+  z-index: 0;
+  transform: rotate(147deg);
+}
+
+.circles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.fa-circle {
+  color: #e2e2e4;
+  cursor: pointer;
+}
+
+/*--------------------- show section ----------------- */
+
+.show {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 50vw 50vw;
+  margin-top: 4%;
+}
+.F_show {
+  background: linear-gradient(
+    269.41deg,
+    #84bcd0 0.07%,
+    rgba(132, 188, 208, 0.28) 99.07%
+  );
+  width: 100%;
+  height: 100%;
+  top: 3547px;
+  opacity: 0.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.6rem;
+  padding-left: 28%;
+}
+.F_show h1 {
+  width: max-content;
+  height: 48px;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+.F_show h3 {
+  width: 249px;
+  height: 44px;
+}
+.F_show button {
+  color: #000000;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background: #e2e2e4;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.F_show button:hover {
+  background-color: #9ce509;
+  color: #ffffff;
+}
+.L_show {
+  width: 100%;
+  height: 100%;
+  top: 3547px;
+}
+.L_show img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- SliderTwo section ----------- */
+
+.para {
+  margin-top: 1%;
+}
+
+.move {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 2rem 1fr 2rem 1fr;
+  margin-top: 4%;
+}
+
+.review {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px; /* Adjust border-radius  */
+}
+.R_sec {
+  border: 1px solid #9ce509;
+}
+.review img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.review p {
+  margin-top: 70px; /* Adjust margin-top to create space for the image */
+}
+#prev {
+  font-size: 8rem;
+  font-weight: 900;
+  padding-left: 7vw;
+  cursor: pointer;
+  color: #9ce509;
+}
+#next {
+  font-size: 8rem;
+  font-weight: 900;
+  padding-right: 7vw;
+  cursor: pointer;
+  color: #9ce509;
+}
+
+/* -----------------  footer --------------*/
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    max-content
+  ); /* Three columns of equal width */
+  color: #000000;
+  color: white;
+
+  margin-top: 5%;
+  gap: 2%;
+  background: #e8e8e8;
+}
+footer img {
+  position: relative;
+}
+.column h3 {
+  color: #000000;
+}
+.column p {
+  color: #000000;
+}
+.F_para {
+  padding: 10px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  width: 322px;
+  height: 88px;
+
+  left: 250px;
+  color: #000000;
+  margin-top: 13rem;
+}
+.f_last {
+  margin-top: -8rem;
+  margin-left: 9rem;
+  position: relative;
+  top: 40%;
+}
+.f2_last {
+  position: relative;
+  top: 10%;
+  width: max-content;
+  height: 19px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+.f_img {
+  position: relative;
+  left: 5rem;
+}
+.column {
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+  padding-top: 1px;
+}
+
+.column h3 {
+  width: max-content;
+  height: 17px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+address {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Three columns of equal width */
+  color: #000000;
+  color: white;
+  padding: 20px;
+  gap: 5%;
+  background: #e8e8e8;
+  display: none;
+}
+address h3 {
+  color: #000000;
+}
+.contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.contact h4 {
+  color: #000000;
+}
+
+/*------------------------->>>>>>>>>>>>>>>>>>>      Media Queries      <<<<<<<<<<<<<<<<<<<<<<<<<<---------------------------*/
+/*------------------------->>>>>>>>>>>>>>>>>>>      Responsiveness      <<<<<<<<<<<<<<<<<<<<<<<<<<---------------------------*/
+
+@media (max-width: 1300px) {
+  .links {
+    margin-left: 10rem;
+  }
+  /* ----------------- layout after nav ------------------------- */
+  .hide_input {
+    display: none;
+  }
+  .layout {
+    display: flex;
+    height: 90vh;
+    width: 70vw;
+    position: relative;
+    top: 4%;
+    align-items: center;
+    justify-content: center;
+    left: 30%;
+  }
+  .layout_one {
+    top: 6%;
+  }
+  .layout_one h5 {
+    width: max-content;
+    height: 48px;
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .layout_one h1 {
+    width: max-content;
+    height: max-content;
+    font-family: Inter;
+    font-size: 7rem;
+    font-weight: 700;
+
+    color: #000000;
+    position: relative;
+    right: -3%;
+  }
+  .layout_one button {
+    border: none;
+    width: max-content;
+    height: Hug (69px);
+    padding: 20px, 40px, 20px, 40px;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .layout_one {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    position: relative;
+    right: 19%;
+  }
+  .layout_two {
+    position: relative;
+    display: flex;
+    top: 6%;
+    left: -20%;
+    z-index: 0;
+    width: 40vw;
+  }
+  .layout_two img {
+    height: 100%;
+    width: 40vw;
+    object-fit: cover;
+  }
+  /*---------- boxes ------------*/
+  .boxes {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(1, max-content);
+    z-index: 999;
+    position: relative;
+    margin-top: 6rem;
+    left: 11%;
+    right: -9%;
+    bottom: 5%;
+    top: -20rem;
+  }
+  .box p {
+    width: 90%;
+    height: 8rem;
+    top: 20%;
+    left: 40%;
+    padding: 8px, 16px, 8px, 16px;
+    border-radius: 10px;
+    gap: 10px;
+    background: #fbfbfb;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .span_two {
+    background-color: #9ce509;
+    color: #ffffff;
+    margin-left: 10%;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+  }
+  .box img {
+    width: 80%;
+    height: 50%;
+    position: relative;
+    top: -35%;
+    object-fit: cover;
+    right: 5%;
+  }
+  /*---------- SliderFirst section ----------- */
+
+  .images_one {
+    margin-left: 17rem;
+  }
+  .images_two {
+    margin-left: -4rem;
+  }
+
+  /*---------- SliderTwo section ----------- */
+  .re_one,
+  .re_three {
+    display: none;
+  }
+  .move {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem;
+  }
+  /*------------ footer -------------*/
+  footer {
+    display: none;
+  }
+  address {
+    margin-top: 10%;
+    display: block;
+  }
+}
+
+/*---------- 8 items section ----------------*/
+@media (max-width: 1200px) {
+  nav {
+    left: 5rem;
+  }
+  .links {
+    margin-left: 20rem;
+  }
+  .searchBox {
+    margin-left: 20%;
+  }
+  .portfolio {
+    margin-top: 5%;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 3%;
+  }
+  .playBtn {
+    padding: 30px 90px;
+  }
+  /*---------- SliderFirst section ----------- */
+
+  .images_two {
+    display: none;
+  }
+}
+/*---------- 8 items section ----------------*/
+@media (max-width: 900px) {
+  /*---- header and navbar ---*/
+  header::before {
+    background: none;
+    position: relative;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  nav .links {
+    display: none;
+  }
+  nav .searchBox {
+    display: none;
+  }
+  nav .menu-button {
+    display: block;
+    position: absolute;
+    background: transparent;
+    color: #9ce509;
+    font-size: 3.6rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    left: 90%;
+    z-index: 9999;
+  }
+  .menu-button:hover {
+    transform: scale(1.1);
+  }
+  .menu-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    z-index: 1000;
+    transition: 0.4s ease;
+  }
+  .menu-none {
+    bottom: -100%;
+    transition: 0.4s ease;
+  }
+  .menubar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    position: relative;
+    z-index: 9999;
+    bottom: 1rem;
+  }
+  .menubar-container a i {
+    font-size: 2.6rem;
+    color: white;
+    position: absolute;
+    z-index: 9999;
+  }
+  .menubar-container a:hover {
+    transform: scale(1.2);
+  }
+  /*----------- layout -----------*/
+
+  /*----------- boxes -----------*/
+  .boxes {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(1, max-content);
+    z-index: 999;
+    position: relative;
+    margin-top: 6rem;
+    left: 11%;
+    right: -9%;
+    bottom: 5%;
+    margin-bottom: 10rem;
+  }
+  .box {
+    margin-bottom: 10rem;
+  }
+  .box p {
+    width: 90%;
+    height: 8rem;
+    top: 20%;
+    left: 40%;
+    padding: 8px;
+    border-radius: 10px;
+    gap: 10px;
+    background: #fbfbfb;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .span_two {
+    background-color: #9ce509;
+    color: #ffffff;
+    margin-left: 10%;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+  }
+  .box img {
+    width: 80%;
+    height: 50%;
+    position: relative;
+    top: -35%;
+    object-fit: cover;
+    right: 5%;
+  }
+  /*--------------- portfolio ------------------*/
+  .portfolio {
+    margin-top: 4%;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 1.5%;
+  }
+  .span_two{
+    margin-left: -25px;
+  }
+
+  /*----------------- 3 item  ------------------------- */
+  .container {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .logo{
+    font-size: 24px;
+    height: 50px;line-height: 25px;
+  }
+  /* ----------------- layout after nav ------------------------- */
+
+  .layout {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    position: relative;
+    top: -5%;
+    align-items: center;
+    justify-content: center;
+    left: 20%;
+  }
+  .layout_one {
+    top: -1%;
+    left: -8rem;
+  }
+  .layout_one h5 {
+    width: max-content;
+    height: 38px;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 1px;
+  }
+  .layout_one h1 {
+    width: max-content;
+    height: max-content;
+    font-family: Inter;
+    font-size: 4rem;
+    font-weight: 700;
+
+    color: #000000;
+    position: relative;
+    right: -3.6%;
+    margin-bottom: 1px;
+  }
+  .layout_one button {
+    border: none;
+    width: max-content;
+    height: Hug (69px);
+    padding: 10px;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .layout_two {
+    position: relative;
+    display: flex;
+    top: 6%;
+    left: -17%;
+    z-index: 0;
+    width: 40vw;
+  }
+  .boxes {
+    top: -40rem;
+  }
+  .slider {
+    margin-top: -120%;
+  }
+  .P_head {
+    margin-top: -40rem;
+  }
+  .portfolio {
+    margin-bottom: 15rem;
+  }
+  .slider {
+    padding: 30px 90px;
+    left: 70rem;
+    width: 90vw;
+  }
+  .F_show h1,
+  h3,
+  button {
+    margin-left: -5rem;
+  }
+  .move,
+  .N_head,
+  .para {
+    display: none;
+  }
+  .new_head {
+    display: none;
+  }
+}
+/*---------- 8 items section ----------------*/
+@media (max-width: 600px) {
+  .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+  /* ----------------- slider section -------------------------
+----------------- have 2 sliders ------------------------- */
+
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img_container .hide_for_media {
+    display: none;
+  }
+
+  .images {
+    width: 90vw;
+  }
+
+  /*--------------------- show section ----------------- */
+
+  .show {
+    grid-template-columns: 80vw;
+    gap: 1%;
+    margin-left: 5rem;
+    margin-top: -55rem;
+  }
+
+  /*--------------------- address section ----------------- */
+  address {
+    margin-top: 30rem;
+  }
+  .new_head {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+  .boxes {
+    top: -25rem;
+  }
+}
+@media (max-width: 500px) {
+  /* ----------------- layout after nav ------------------------- */
+  nav .menu-button {
+    left: 90%;
+  }
+  nav h2 {
+    margin-right: 19%;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    position: relative;
+    top: 5%;
+    align-items: center;
+    justify-content: center;
+    left: 20%;
+  }
+  .layout_one h5 {
+    width: max-content;
+    height: 18px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .layout_one h1 {
+    width: max-content;
+    height: max-content;
+    font-family: Inter;
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: #000000;
+    position: relative;
+    right: -3.6%;
+    margin-top: -3rem;
+    margin-left: -10px;
+  }
+  .layout_one button {
+    margin-top: -5rem;
+    margin-left: -2rem;
+  }
+  .layout_one button span {
+    border: none;
+    width: max-content;
+    height: Hug (69px);
+    padding: 5px;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .layout_one button img {
+    font-size: 16px;
+  }
+  .layout_one {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    position: relative;
+    right: 19%;
+    gap: 2rem;
+  }
+  .layout_two {
+    position: relative;
+    display: flex;
+    top: 6%;
+    left: -20%;
+    z-index: 0;
+    width: 40vw;
+  }
+  .layout_two img {
+    height: 100%;
+    width: 40vw;
+    object-fit: cover;
+  }
+
+  /* boxes */
+  .boxes {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(4, 380px);
+    z-index: 999;
+    position: relative;
+    margin-top: 6rem;
+    left: 20%;
+    right: -9%;
+    bottom: 5%;
+    margin-bottom: 10rem;
+  }
+
+  .P_head {
+    margin-top: -20rem;
+    margin-left: 9rem;
+  }
+
+.F_show h1{
+  font-size: 26px;
+}
+.F_show button{
+  font-size: 16px;
+}
+
+  /* slider two */
+  .N_head {
+    display: none;
+  }
+  .para,.circles {
+    display: none;
+  }
+
+  .move {
+    display: none;
+  }
+}
